@@ -1,0 +1,639 @@
+/* ============================
+   ORIGINAL STYLES FROM ASSIGNMENT 3
+   ============================ */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  background-color: #fefffb;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* ============================
+   TASK 1: Responsive Typography
+   Using CSS Media Queries
+   ============================ */
+
+/* Base/Mobile styles (< 576px) */
+body {
+    font-size: 14px;
+}
+
+.responsive-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+.responsive-heading {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.responsive-subheading {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.responsive-text {
+    font-size: 0.9rem;
+}
+
+/* Tablet styles (≥ 576px) */
+@media (min-width: 576px) {
+    body {
+        font-size: 15px;
+    }
+
+    .responsive-title {
+        font-size: 2rem;
+    }
+
+    .responsive-heading {
+        font-size: 1.4rem;
+    }
+
+    .responsive-subheading {
+        font-size: 1.15rem;
+    }
+
+    .responsive-text {
+        font-size: 0.95rem;
+    }
+}
+
+/* Medium Tablet (≥ 768px) */
+@media (min-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .responsive-title {
+        font-size: 2.5rem;
+    }
+
+    .responsive-heading {
+        font-size: 1.6rem;
+    }
+
+    .responsive-subheading {
+        font-size: 1.25rem;
+    }
+
+    .responsive-text {
+        font-size: 1rem;
+    }
+}
+
+/* Desktop styles (≥ 992px) */
+@media (min-width: 992px) {
+    body {
+        font-size: 17px;
+    }
+
+    .responsive-title {
+        font-size: 3rem;
+    }
+
+    .responsive-heading {
+        font-size: 1.75rem;
+    }
+
+    .responsive-subheading {
+        font-size: 1.4rem;
+    }
+
+    .responsive-text {
+        font-size: 1.1rem;
+    }
+}
+
+/* Large Desktop (≥ 1200px) */
+@media (min-width: 1200px) {
+    .responsive-title {
+        font-size: 3.5rem;
+    }
+
+    .responsive-heading {
+        font-size: 2rem;
+    }
+}
+
+/* ============================
+   TASK 2: Card Group Responsive
+   Using CSS Media Queries ONLY
+   ============================ */
+
+.card-responsive-group {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Mobile: Stack vertically (< 768px) */
+@media (max-width: 767px) {
+    .card-responsive-group > div {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Tablet: Two cards per row (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .card-responsive-group > div {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/* Desktop: Three cards per row (≥ 992px) */
+@media (min-width: 992px) {
+    .card-responsive-group > div {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+    }
+}
+
+/* ============================
+   BOOTSTRAP NAVBAR CUSTOMIZATION (TASK 5)
+   ============================ */
+
+.navbar-brand {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ffc107;
+    background-color: rgba(255, 193, 7, 0.1);
+    transform: translateY(-2px);
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: #ffc107;
+    background-color: rgba(255, 193, 7, 0.2);
+}
+
+/* ============================
+   CAROUSEL CUSTOMIZATION (TASK 7)
+   ============================ */
+
+.carousel-img {
+    height: 600px;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .carousel-img {
+        height: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .carousel-img {
+        height: 300px;
+    }
+}
+
+.carousel-caption {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* ============================
+   ORIGINAL PROMO GRID STYLES
+   ============================ */
+
+.promo-grid {
+  display: flex;
+  gap: 0;
+  height: 400px;
+}
+
+.promo-item {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.promo-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.promo-item:hover {
+  transform: scale(1.05);
+  z-index: 1;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.promo-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: background-color 0.3s ease;
+  z-index: 0;
+}
+
+.promo-item:hover::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.promo-link {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 20px;
+}
+
+.promo-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative; 
+  z-index: 3;
+}
+
+.promo-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  position: relative;
+  z-index: 3;
+}
+
+@media (max-width: 768px) {
+  .promo-grid {
+    flex-direction: column;
+    height: auto;
+  }
+  
+  .promo-item {
+    height: 200px;
+  }
+}
+
+/* ============================
+   BOOTSTRAP CARDS CUSTOMIZATION (TASK 8)
+   ============================ */
+
+.card {
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-img-top {
+    height: 250px;
+    object-fit: cover;
+}
+
+/* ============================
+   BOOTSTRAP BUTTONS CUSTOMIZATION (TASK 6)
+   ============================ */
+
+.btn {
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+    background-color: #b76e79;
+    border-color: #b76e79;
+}
+
+.btn-primary:hover {
+    background-color: #8d525a;
+    border-color: #8d525a;
+}
+
+.btn-outline-primary {
+    color: #b76e79;
+    border-color: #b76e79;
+}
+
+.btn-outline-primary:hover {
+    background-color: #b76e79;
+    border-color: #b76e79;
+    color: white;
+}
+
+/* Button group responsive */
+.responsive-btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+@media (max-width: 576px) {
+    .responsive-btn-group {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .responsive-btn-group .btn {
+        width: 100%;
+    }
+}
+
+/* ============================
+   FORM STYLING (TASK 9)
+   ============================ */
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #b76e79;
+    box-shadow: 0 0 0 0.2rem rgba(183, 110, 121, 0.25);
+}
+
+/* ============================
+   ACCESSIBILITY (TASK 10)
+   ============================ */
+
+a:focus,
+button:focus,
+.btn:focus,
+.form-control:focus {
+    outline: 2px solid #ffc107;
+    outline-offset: 2px;
+}
+
+/* ============================
+   FOOTER STYLES
+   ============================ */
+
+footer a {
+    transition: all 0.3s ease;
+}
+
+footer a:hover {
+    opacity: 0.8;
+}
+
+/* ============================
+   UTILITY CLASSES
+   ============================ */
+
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+.text-dark {
+    color: #2c1a18 !important;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================
+   GALLERY PAGE STYLES (from original)
+   ============================ */
+
+.gallery {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #fefffb;
+}
+
+.gallery .title2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #4a2c2a; 
+}
+
+.img-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.imag-bord {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.imag-bord img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; 
+  display: block;
+}
+
+.imag-bord p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.imag-bord:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.imag-bord:hover p {
+  transform: translateY(0);
+}
+
+/* ============================
+   MENU PAGE STYLES (from original)
+   ============================ */
+
+.men-main {
+  background-color: #f8f9fa;
+}
+
+.sec-menu {
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.sec-menu .title2 {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #4a2c2a;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: translateX(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.menu-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.menu-text {
+  flex: 1;
+}
+
+.menu-text h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #2c1a18;
+}
+
+.menu-text p {
+  font-size: 16px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .menu-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .menu-img {
+    width: 200px;
+    height: 150px;
+  }
+}
+
+/* ============================
+   CONTACT PAGE STYLES (from original)
+   ============================ */
+
+.con-main {
+  background-color: #fefffb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+.contact-section {
+  max-width: 600px;
+  width: 100%;
+  margin: 50px 20px;
+  padding: 40px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section .title3 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #2c1a18;
+}
+
+/* ============================
+   RESPONSIVE ADJUSTMENTS
+   ============================ */
+
+@media (max-width: 768px) {
+  .img-box {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+  }
+}
+
+/* ============================
+   PRINT STYLES
+   ============================ */
+
+@media print {
+  .navbar,
+  .carousel,
+  .btn,
+  footer {
+    display: none;
+  }
+}
