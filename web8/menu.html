@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee PO - Menu</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- jQuery CDN  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container-fluid px-lg-4 px-3">
+        <a class="navbar-brand fw-bold text-warning" href="index.html"
+          >Coffee PO</a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item me-3 my-1">
+              <button
+                id="colorChangeBtn"
+                class="btn btn-sm btn-outline-warning ms-lg-3 mt-2 mt-lg-0"
+                aria-label="Toggle dark mode"
+              >
+                🌙 Dark Mode
+              </button>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Photos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="menu.html"
+                >Menu</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="bg-light py-5">
+      <div class="container my-5">
+        <h1 class="text-center mb-5 fw-bold text-dark responsive-title">
+          Our Coffee Menu
+        </h1>
+
+        <!-- Menu Items with Bootstrap Cards -->
+        <div class="row g-4 mb-5">
+          <div class="col-lg-6 col-md-12">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="img/latte.jpg"
+                    class="img-fluid rounded-start h-100 object-fit-cover"
+                    alt="Latte"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body d-flex flex-column h-100">
+                    <h5 class="card-title fw-bold text-dark">Latte</h5>
+                    <p class="card-text text-muted flex-grow-1">
+                      Espresso, steamed milk, milk foam - A smooth and creamy
+                      coffee experience that delights your senses.
+                    </p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="badge bg-primary fs-6">2500 ₸</span>
+                      <button class="btn btn-sm btn-outline-primary">
+                        Order Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-12">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="img/cappuccino.jpg"
+                    class="img-fluid rounded-start h-100 object-fit-cover"
+                    alt="Cappuccino"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body d-flex flex-column h-100">
+                    <h5 class="card-title fw-bold text-dark">Cappuccino</h5>
+                    <p class="card-text text-muted flex-grow-1">
+                      Espresso, steamed milk, thick milk foam - Perfect balance
+                      of coffee and milk in every sip.
+                    </p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="badge bg-primary fs-6">2300 ₸</span>
+                      <button class="btn btn-sm btn-outline-primary">
+                        Order Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-12">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="img/americano.jpg"
+                    class="img-fluid rounded-start h-100 object-fit-cover"
+                    alt="Americano"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body d-flex flex-column h-100">
+                    <h5 class="card-title fw-bold text-dark">Americano</h5>
+                    <p class="card-text text-muted flex-grow-1">
+                      Espresso, hot water - Simple, strong, and satisfying for
+                      true coffee lovers.
+                    </p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="badge bg-primary fs-6">1800 ₸</span>
+                      <button class="btn btn-sm btn-outline-primary">
+                        Order Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-12">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="img/mocha.jpg"
+                    class="img-fluid rounded-start h-100 object-fit-cover"
+                    alt="Mocha"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body d-flex flex-column h-100">
+                    <h5 class="card-title fw-bold text-dark">Mocha</h5>
+                    <p class="card-text text-muted flex-grow-1">
+                      Espresso, chocolate syrup, steamed milk, whipped cream - A
+                      sweet coffee treat for chocolate lovers.
+                    </p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="badge bg-primary fs-6">2800 ₸</span>
+                      <button class="btn btn-sm btn-outline-primary">
+                        Order Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 col-md-12">
+            <div class="card shadow-sm border-0 h-100">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img
+                    src="img/espresso.jpg"
+                    class="img-fluid rounded-start h-100 object-fit-cover"
+                    alt="Espresso"
+                  />
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body d-flex flex-column h-100">
+                    <h5 class="card-title fw-bold text-dark">Espresso</h5>
+                    <p class="card-text text-muted flex-grow-1">
+                      Rich and bold single shot - Pure coffee essence in a small
+                      cup for the connoisseur.
+                    </p>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <span class="badge bg-primary fs-6">1500 ₸</span>
+                      <button class="btn btn-sm btn-outline-primary">
+                        Order Now
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Special Offers Section -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <div class="alert alert-success shadow-sm" role="alert">
+              <h4 class="alert-heading fw-bold">☕ Special Offer!</h4>
+              <p class="mb-0">
+                Buy any 2 drinks and get 10% off your order! Valid all week.
+              </p>
+              <div class="my-3">
+                <button
+                  id="subscribeBtn"
+                  class="btn btn-warning btn-lg shadow-lg"
+                >
+                  Get Special Offers!
+                </button>
+              </div>
+              <div id="popupOverlay"></div>
+
+              <div id="subscriptionPopup">
+                <div class="popup-content">
+                  <button id="closePopup" class="close-btn">&times;</button>
+
+                  <h3 class="text-center mb-3">Subscribe to Our Newsletter</h3>
+                  <p class="text-center text-muted">
+                    Don't miss out on our best deals!
+                  </p>
+
+                  <form id="subscribeForm">
+                    <div class="mb-3">
+                      <label for="popupEmail" class="form-label"
+                        >Email Address</label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="popupEmail"
+                        placeholder="your.email@example.com"
+                        required
+                      />
+                    </div>
+                    <button type="submit" class="btn btn-warning w-100">
+                      Subscribe
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="text-center mt-5">
+          <div class="btn-group btn-group-lg" role="group">
+            <a href="contact.html" class="btn btn-primary">Reserve Table</a>
+            <a href="gallery.html" class="btn btn-outline-secondary"
+              >View Gallery</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-lg-6 col-md-6 col-sm-12">
+            <h3 class="h5 mb-4 text-warning">Contact Information</h3>
+            <div class="mb-3">
+              <p class="mb-1 text-light">Cofee po CEO</p>
+              <a href="tel:+77777777777" class="text-white text-decoration-none fs-5">+7 777 777-77-77</a>
+            </div>
+            <div class="mb-3">
+              <p class="mb-1 text-light">administration</p>
+              <a href="tel:+77777777777" class="text-white text-decoration-none fs-5">+7 777 777-77-77</a>
+            </div>
+
+            <div class="mt-4">
+              <a href="#" class="btn btn-outline-light btn-sm me-2" aria-label="Facebook" target="_blank">Facebook</a>
+              <a href="https://www.instagram.com/" class="btn btn-outline-light btn-sm" aria-label="Instagram" target="_blank">Instagram</a>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 text-lg-end text-md-end text-sm-start">
+            <p class="mb-1">&copy; 2025 PO Coffee</p>
+            <p class="mb-1">Aitu University</p>
+            <p class="mb-0">SE-2404</p>
+            <div class="my-5" id="dateTimeDisplay"></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="auth.js" ></script>
+    <script src="script.js" defer></script>
+    <!-- jQuery Features Script -->
+    <script src="jquery-features.js"></script>
+  </body>
+</html>
