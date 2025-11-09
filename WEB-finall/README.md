@@ -12,16 +12,14 @@
 
 **Team Members:**
 
-1. Saqyp Dias
-2. Izimbetov Nurzhan
-3. Qazybai Ali
-4. Nurasyl Asan
-5. Altyngazinov Alinur
+1.Yermakhanbet Balgyn
+2.Markhabat Ayana
+
 
 **Links:**
 
-- **GitHub Repository:** [GitHub](https://github.com/aaituu/WEB-finall)
-- **Live Website:** [Coffe PO](https://aaituu.github.io/WEB-finall/)
+- **GitHub Repository:** [GitHub](https://github.com/aaituu/BalgynWEB/WEB-finall/)
+- **Live Website:** [Coffe PO](https://aaituu.github.io/BalgynWEB/WEB-finall/)
 
 ---
 
